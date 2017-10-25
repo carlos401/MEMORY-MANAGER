@@ -3,5 +3,5 @@ project(TP4_OPER)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(SOURCE_FILES main.cpp MemManager.cpp MemManager.h Memory.cpp Memory.h Process.cpp Process.h Program.cpp Program.h Instruction.cpp Instruction.h Page.cpp Page.h Compiler.cpp Compiler.h)
-add_executable(TP4_OPER ${SOURCE_FILES} MemManager.cpp MemManager.h Memory.cpp Memory.h Process.cpp Process.h Program.cpp Program.h Instruction.cpp Instruction.h Page.cpp Page.h Compiler.cpp Compiler.h)
+set(SOURCE_FILES main.cpp Memory/Source/MemManager.cpp Memory/Header/MemManager.h Memory/Source/Memory.cpp Memory/Header/Memory.h Process/Source/Process.cpp Process/Header/Process.h Program/Program.cpp Program/Program.h Process/Source/Instruction.cpp Process/Header/Instruction.h Memory/Source/Page.cpp Memory/Header/Page.h Process/Source/Compiler.cpp Process/Header/Compiler.h)
+add_executable(TP4_OPER ${SOURCE_FILES} Memory/Source/MemManager.cpp Memory/Header/MemManager.h Memory/Source/Memory.cpp Memory/Header/Memory.h Process/Source/Process.cpp Process/Header/Process.h Program/Program.cpp Program/Program.h Process/Source/Instruction.cpp Process/Header/Instruction.h Memory/Source/Page.cpp Memory/Header/Page.h Process/Source/Compiler.cpp Process/Header/Compiler.h)

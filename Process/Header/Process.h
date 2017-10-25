@@ -6,7 +6,7 @@
 #define TP4_OPER_PROCESS_H
 
 
-#include "MemManager.h"
+#include "../../Memory/Header/MemManager.h"
 
 using namespace std;
 
