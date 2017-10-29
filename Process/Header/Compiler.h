@@ -16,9 +16,9 @@ class Compiler {
 
 public:
     /**
-     * Transforms txt file into a list of instructions
+     * Transforms txt file into a queue of instructions
      * @param nameOfFile the name of the txt file
-     * @return a list of instructions
+     * @return a queue of instructions
      */
     queue<Instruction> compile(string nameOfFile);
 private:

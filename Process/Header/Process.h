@@ -19,6 +19,14 @@ using namespace std;
 class Process {
 
 public:
+
+    /**
+     * The constructor
+     * @param nameOfFile the name of file with the instructions
+     * @param manager the reference to the memory manager
+     */
+    void Process(string nameOfFile,MemManager *manager);
+
     /**
      * The principal concurrent method like in Java
      */
@@ -31,7 +39,7 @@ private:
     int r1, r2, r3;
 
     /**
-     * A queue for instructions to execute
+     * A queue with the instructions to execute
      */
     queue<Instruction> toExecute;
 
