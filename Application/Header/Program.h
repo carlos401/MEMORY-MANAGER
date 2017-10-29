@@ -6,8 +6,8 @@
 #define TP4_OPER_PROGRAM_H
 
 #include <vector>
-#include "../Memory/Header/MemManager.h"
-#include "../Process/Header/Process.h"
+#include "../../Memory/Header/MemManager.h"
+#include "../../Process/Header/Process.h"
 
 using namespace std;
 
