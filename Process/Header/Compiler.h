@@ -9,20 +9,28 @@
 #include "Instruction.h"
 #include <queue>
 #include <string>
+#include <list>
 
 using namespace std;
 
-class Compiler {
+class Compiler{
 
 public:
+
     /**
      * Transforms txt file into a queue of instructions
      * @param nameOfFile the name of the txt file
      * @return a queue of instructions
      */
     queue<Instruction> compile(string nameOfFile);
-private:
 
+private:
+    /**
+     * Allows read lines from a .txt file
+     * @param nameOfFile the name of file to be open
+     * @return a list with all lines in the file
+     */
+    list<string> readFromFile(string nameOfFile);
 };
 
 

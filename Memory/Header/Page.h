@@ -14,7 +14,14 @@ class Page {
 public:
 
 private:
+    /**
+     *
+     */
     unsigned pageNumber;
+
+    /**
+     *
+     */
     map<int, int> content;
 };
 

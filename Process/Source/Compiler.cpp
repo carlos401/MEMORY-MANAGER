@@ -3,16 +3,15 @@
 //
 
 #include <cstring>
+#include <fstream>
 #include "../Header/Compiler.h"
-#include "../Header/Reader.h"
 
-queue<Instruction> Compiler::compile(string nameOfFile) {
+queue<Instruction> Compiler::compile(string nameOfFile){
     //to return
     queue<Instruction> instructions();
     //to read from a txt file
-    Reader rd;
     string token, line;
-    list<string> txtContent = rd.readFromFile(nameOfFile);
+    list<string> txtContent = readFromFile(nameOfFile);
     list<string>::iterator iterator1 = txtContent.begin();
     //logic zone
     while ((line = *iterator1)!= NULL) {
@@ -53,4 +52,21 @@ queue<Instruction> Compiler::compile(string nameOfFile) {
         }
     }
     return instructions();
+}
+
+
+list<string> Compiler::readFromFile(string nameOfFile) {
+    //empty list to return
+    list<string> linesReaded();
+    //the file is open only to read
+    ifstream inputFile(nameOfFile,ifstream::in);
+    string line;
+    if(inputFile.is_open()){
+        while(!inputFile.eof()){
+            //get line and save it
+            getline(inputFile,line);
+            linesReaded().push_back(line);
+        }
+    }
+    return linesReaded();
 }

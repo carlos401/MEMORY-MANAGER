@@ -9,7 +9,6 @@
  * The compiler's result
  */
 class Instruction {
-
 public:
     /**
      * Possible types of Instruction.The syntax is the following:

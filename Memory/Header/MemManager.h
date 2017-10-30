@@ -14,7 +14,6 @@ class MemManager {
 public:
 
 
-
 private:
     Memory RAM;
     Memory secondStorage;

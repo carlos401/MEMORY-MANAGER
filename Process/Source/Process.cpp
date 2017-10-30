@@ -3,15 +3,22 @@
 //
 
 #include "../Header/Process.h"
-#include "../Header/Reader.h"
 #include "../Header/Compiler.h"
 
 
 Process::Process(string nameOfFile, MemManager *manager) {
-    Process::manager = manager;
-    Process::toExecute = Compiler().compile(nameOfFile);
-    Process::pageTableRAM = map<int,int>();
-    Process::pageTableDisk = map<int,int>();
+    try {
+        Process::manager = manager;
+        //important operation: compilation process
+        Process::toExecute = Compiler().compile(nameOfFile);
+        //
+        Process::pageTableRAM = map<int,int>();
+        Process::pageTableSec = map<int,int>();
+    } catch (Ex){
+
+    }
+
+
 }
 
 void Process::start() {

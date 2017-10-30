@@ -5,7 +5,6 @@
 #ifndef TP4_OPER_PROCESS_H
 #define TP4_OPER_PROCESS_H
 
-
 #include "../../Memory/Header/MemManager.h"
 #include "Instruction.h"
 #include <queue>
@@ -17,15 +16,13 @@ using namespace std;
  * This class is a thread implementation
  */
 class Process {
-
 public:
-
     /**
      * The constructor
      * @param nameOfFile the name of file with the instructions
      * @param manager the reference to the memory manager
      */
-    void Process(string nameOfFile,MemManager *manager);
+    Process(string nameOfFile,MemManager *manager);
 
     /**
      * The principal concurrent method like in Java
@@ -56,7 +53,7 @@ private:
     /**
      * To know the direction for all pages in sec memory
      */
-    map<int, int> pageTableDisk;
+    map<int, int> pageTableSec;
 };
 
 

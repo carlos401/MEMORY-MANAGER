@@ -6,6 +6,9 @@
 #define TP4_OPER_MEMORY_H
 
 #include <map>
+#include <unordered_set>
+#include <vector>
+#include "Page.h"
 
 using namespace std;
 
@@ -16,8 +19,17 @@ public:
 
 
 private:
+    /**
+     * The number of pages
+     */
     unsigned size;
-    map<int, int> map_table;
+
+    /**
+     * The real memory, associates number of pages with some content
+     * For each page, there are some content
+     */
+    vector<Page> map_table;
+
 };
 
 
