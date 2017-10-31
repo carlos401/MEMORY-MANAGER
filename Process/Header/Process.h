@@ -22,7 +22,7 @@ public:
      * @param nameOfFile the name of file with the instructions
      * @param manager the reference to the memory manager
      */
-    Process(string nameOfFile,MemManager *manager);
+    Process(int id,string nameOfFile,MemManager *manager);
 
     /**
      * The principal concurrent method like in Java
@@ -30,6 +30,11 @@ public:
     void start();
 
 private:
+    /**
+     * The unique identifier for each process
+     */
+    int id;
+
     /**
      * Each process has three CPU registers
      */
@@ -44,16 +49,6 @@ private:
      * A pointer to memManager to access RAM and sec
      */
     MemManager *manager;
-
-    /**
-     * To know if the current process has some pages in RAM
-     */
-    map<int, int> pageTableRAM;
-
-    /**
-     * To know the direction for all pages in sec memory
-     */
-    map<int, int> pageTableSec;
 };
 
 

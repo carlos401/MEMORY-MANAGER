@@ -4,20 +4,18 @@
 
 #include "../Header/Process.h"
 #include "../Header/Compiler.h"
+#include <iostream>
 
 
-Process::Process(string nameOfFile, MemManager *manager) {
+Process::Process(int id,string nameOfFile, MemManager *manager) {
     try {
+        Process::id = id;
         Process::manager = manager;
         //important operation: compilation process
         Process::toExecute = Compiler().compile(nameOfFile);
-        //
-        Process::pageTableRAM = map<int,int>();
-        Process::pageTableSec = map<int,int>();
-    } catch (Ex){
-
+    } catch (exception exception1){
+        cout << exception1.what() << endl;
     }
-
 
 }
 
